@@ -10,4 +10,4 @@ sudo: required
 script:
   - docker pull ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37
   - sudo chmod +x script.sh
-  - docker run -it --rm --name powerai ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37 ./script
+  - docker run -td --rm --name powerai ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37 ./script
