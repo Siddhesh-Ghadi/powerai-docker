@@ -9,5 +9,4 @@ sudo: required
 
 script:
   - docker pull ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37
-  - sudo chmod +x script.sh
-  - docker run -td --rm --name powerai ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37 ./script
+  - docker run -a stdin -a stdout -a stderr -u root -v .:/home/conda/:rw,z ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37 bash /home/conda/script.sh
