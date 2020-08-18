@@ -1,0 +1,13 @@
+arch: 
+  - ppc64le
+  - amd64
+  
+dist: bionic
+
+service: docker
+sudo: required
+
+script:
+  - docker pull ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37
+  - sudo chmod +x script.sh
+  - docker run -it --rm --name powerai ibmcom/powerai:1.7.0-pytorch-ubuntu18.04-py37 ./script
